@@ -144,7 +144,7 @@ def process_taglist_nodes(app, doctree, fromdocname):
 
         for tag_info in env.tags_all_tags:
             tags = tag_info['tags']
-            if not set(tags).intersection(node.tags):
+            if not set(tags) > set(node.tags) :
                 continue
 
                     
